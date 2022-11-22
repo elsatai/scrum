@@ -8,8 +8,14 @@ body section.active {
 
 body section .container {
     height: 100vh;
+    width: auto;
     display: flex;
     justify-content: center;
+}
+body section  .container .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .stage1 .container .btn {
@@ -17,6 +23,7 @@ body section .container {
     top: 36%;
     cursor: pointer;
     width: 9%;
+    z-index: 1;
 }
 
 .stage1 .container .btn img {
@@ -38,7 +45,7 @@ body section .container {
     top: 68%;
     cursor: pointer;
     width: 14%;
-    width: calc(293/1024)px;
+    z-index: 1;
 }
 
 .stage2 .container .btn img {
@@ -46,12 +53,25 @@ body section .container {
     left: 0;
     top: 0;
 }
-
-
 .stage2 .container .btn:hover {
     transform: scale(1.02);
 }
 
 .stage2 .container .btn:active {
     transform: scale(1);
+}
+
+.stage3 .container .cards {
+    z-index: 1;
+    width: 70%;
+}
+
+.stage3 .container .cards .card {
+    display: inline-block;
+    width: 28%;
+    padding: 2%;
+}
+
+.stage3 .container .cards .card img {
+    width: 100%;
 }
