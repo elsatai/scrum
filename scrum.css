@@ -1,4 +1,57 @@
-.stage01 {
-    text-align: center;
-    
+body section {
+    display: none;
+}
+
+body section.active {
+    display: block;
+}
+
+body section .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.stage1 .container .btn {
+    position: absolute;
+    top: 36%;
+    cursor: pointer;
+    width: 9%;
+}
+
+.stage1 .container .btn img {
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.stage1 .container .btn:hover {
+    transform: scale(1.02);
+}
+
+.stage1 .container .btn:active {
+    transform: scale(1);
+}
+
+.stage2 .container .btn {
+    position: absolute;
+    top: 68%;
+    cursor: pointer;
+    width: 14%;
+    width: calc(293/1024)px;
+}
+
+.stage2 .container .btn img {
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+
+.stage2 .container .btn:hover {
+    transform: scale(1.02);
+}
+
+.stage2 .container .btn:active {
+    transform: scale(1);
 }

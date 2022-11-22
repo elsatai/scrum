@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>The F2E 4th 修煉計畫</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' ref="normalize.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='scrum.css'>
-    
+
+    <link rel='stylesheet' type='text/css' media='screen' ref="./normalize.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='./scrum.css'>
 </head>
+
 <body>
-    <div class="stage01">
-        <img src="image/0-start.png">
-    </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-<script src='scrum.js'></script>
+    <section class="stage1 active">
+        <div class="container">
+            <img src="./image/0/bg.jpg" alt="bg">
+
+            <div class="btn">
+                <img src="./image/0/start.png" alt="start" onclick="changeStep(2)">
+            </div>
+        </div>
+    </section>
+
+    <section class="stage2 ">
+        <div class="container">
+            <img src="./image/0-1/bg.jpg" alt="bg">
+
+            <div class="btn">
+                <img src="./image/0-1/btn.png" alt="start">
+            </div>
+        </div>
+    </section>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"></script>
+<script src='./scrum.js'></script>
 
 </html>
