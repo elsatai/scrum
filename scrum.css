@@ -7,23 +7,37 @@ body section.active {
 }
 
 body section .container {
-    height: 100vh;
     width: auto;
+    height: 100vh;
     display: flex;
     justify-content: center;
 }
-body section  .container .bg-img {
+
+body section .container .bg-img {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+}
+
+.next-btn {
+    position: absolute;
+    cursor: pointer;
+    right: 18%;
+    bottom: 4%;
+}
+.next-btn.hidden {
+    display: none;
 }
 
 .stage1 .container .btn {
     position: absolute;
-    top: 36%;
+    top: 35%;
     cursor: pointer;
-    width: 9%;
-    z-index: 1;
+    width: 10%;
 }
 
 .stage1 .container .btn img {
@@ -45,7 +59,6 @@ body section  .container .bg-img {
     top: 68%;
     cursor: pointer;
     width: 14%;
-    z-index: 1;
 }
 
 .stage2 .container .btn img {
@@ -53,6 +66,7 @@ body section  .container .bg-img {
     left: 0;
     top: 0;
 }
+
 .stage2 .container .btn:hover {
     transform: scale(1.02);
 }
@@ -62,16 +76,33 @@ body section  .container .bg-img {
 }
 
 .stage3 .container .cards {
-    z-index: 1;
-    width: 70%;
+    display: flex;
+    align-items: center;
 }
 
-.stage3 .container .cards .card {
-    display: inline-block;
-    width: 28%;
-    padding: 2%;
+.stage3 .container .cards .card-box {
+    margin: 2% auto;
+    cursor: pointer;
+    width: 368px;
+    height: 560px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s ease;
 }
 
-.stage3 .container .cards .card img {
+.stage3 .container .cards .card-box .card {
+    display: block;
+    position: absolute;
     width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+}
+
+.stage3 .container .cards .card-box .card.back {
+    transform: rotateY(180deg);
+}
+
+.stage3 .container .cards .card-box.flip {
+    transform: rotateY(180deg);
 }

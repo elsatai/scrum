@@ -10,39 +10,50 @@
     <link rel='stylesheet' type='text/css' media='screen' href="./normalize.css">
     <link rel='stylesheet' type='text/css' media='screen' href='./scrum.css'>
 </head>
+
 <body>
-    <section class="stage1 ">
+    <section class="stage1 active">
         <div class="container">
             <div class="btn">
                 <img src="./image/0/start.png" alt="start" onclick="changeStep(2)">
             </div>
-            <img class="bg-img" src="./image/0/bg.jpg" alt="bg">
+
+            <div class="bg-img" style="background-image: url('./image/0/bg.jpg')"></div>
         </div>
     </section>
 
     <section class="stage2 ">
         <div class="container">
             <div class="btn">
-                <img src="./image/0-1/btn.png" alt="start">
+                <img src="./image/0-1/btn.png" alt="start" onclick="changeStep(3)">
             </div>
-            <img class="bg-img" src="./image/0-1/bg.jpg" alt="bg">
+
+            <div class="bg-img" style="background-image: url('./image/0-1/bg.jpg')"></div>
         </div>
     </section>
 
-    <section class="stage3 active">
+    <section class="stage3 ">
         <div class="container">
             <div class="cards">
-                <div class="card">
-                    <img src="./image/1-1/card.png" alt="card">
+                <div class="card-box">
+                    <div class="card front" style="background-image: url('./image/1-1/card.png')"></div>
+                    <div class="card back" style="background-image: url('./image/1-2/role1.png')"></div>
                 </div>
-                <div class="card">
-                    <img src="./image/1-1/card.png" alt="card">
+                <div class="card-box">
+                    <div class="card front" style="background-image: url('./image/1-1/card.png')"></div>
+                    <div class="card back" style="background-image: url('./image/1-2/role2.png')"></div>
                 </div>
-                <div class="card">
-                    <img src="./image/1-1/card.png" alt="card">
+                <div class="card-box">
+                    <div class="card front" style="background-image: url('./image/1-1/card.png')"></div>
+                    <div class="card back" style="background-image: url('./image/1-2/role3.png')"></div>
                 </div>
             </div>
-            <img class="bg-img" src="./image/1-1/bg.jpg" alt="bg">
+
+            <div class="next-btn hidden">
+                <img src="./image/next.png" alt="next">
+            </div>
+
+            <div class="bg-img" style="background-image: url('./image/1-1/bg.jpg')"></div>
         </div>
     </section>
 </body>
