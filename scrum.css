@@ -11,6 +11,10 @@ body section .container {
     height: 100vh;
     display: flex;
     justify-content: center;
+    aspect-ratio: 1440 / 1024;
+    object-fit: contain;
+    margin: 0 auto;
+    position: relative;
 }
 
 body section .container .bg-img {
@@ -26,18 +30,26 @@ body section .container .bg-img {
 .next-btn {
     position: absolute;
     cursor: pointer;
-    right: 18%;
-    bottom: 4%;
+    width: 6%;
+    height: 9%;
+    bottom: 3%;
+    right: 3%;
 }
+
+.next-btn img {
+    width: 100%;
+    height: auto;
+}
+
 .next-btn.hidden {
     display: none;
 }
 
 .stage1 .container .btn {
     position: absolute;
-    top: 35%;
+    top: 36.5%;
     cursor: pointer;
-    width: 10%;
+    width: 13%;
 }
 
 .stage1 .container .btn img {
@@ -56,9 +68,9 @@ body section .container .bg-img {
 
 .stage2 .container .btn {
     position: absolute;
-    top: 68%;
+    top: 69%;
     cursor: pointer;
-    width: 14%;
+    width: 20%;
 }
 
 .stage2 .container .btn img {
@@ -77,17 +89,19 @@ body section .container .bg-img {
 
 .stage3 .container .cards {
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .stage3 .container .cards .card-box {
-    margin: 2% auto;
+    margin: auto 2%;
     cursor: pointer;
-    width: 368px;
-    height: 560px;
-    position: relative;
     transform-style: preserve-3d;
     transition: 1s ease;
+    width: 25%;
+    height: 54%;
 }
 
 .stage3 .container .cards .card-box .card {
@@ -97,6 +111,7 @@ body section .container .bg-img {
     height: 100%;
     backface-visibility: hidden;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .stage3 .container .cards .card-box .card.back {
@@ -105,4 +120,22 @@ body section .container .bg-img {
 
 .stage3 .container .cards .card-box.flip {
     transform: rotateY(180deg);
+}
+
+.stage4 .container .cards {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.stage4 .container .cards .card {
+    width: 24%;
+    height: 53.7%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    margin-top: 7%;
+    opacity: 0;
 }
