@@ -139,3 +139,24 @@ body section .container .bg-img {
     margin-top: 7%;
     opacity: 0;
 }
+
+.stage5 .container .btn {
+    position: absolute;
+    top: 56%;
+    cursor: pointer;
+    width: 22.7%;
+}
+
+.stage5 .container .btn img {
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.stage5 .container .btn:hover {
+    transform: scale(1.02);
+}
+
+.stage5 .container .btn:active {
+    transform: scale(1);
+}
