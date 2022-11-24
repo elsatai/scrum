@@ -1,3 +1,6 @@
+body
+  overflow: hidden
+  font-family: 'Noto Sans TC', '微軟正黑體', 'sans-serif'
 body section
   display: none
 
@@ -39,7 +42,7 @@ body section
     width: 100%
     height: auto
 
-.stage1 .container .btn
+.stage0 .container .btn
   position: absolute
   top: 36.5%
   cursor: pointer
@@ -56,7 +59,7 @@ body section
   &:active
     transform: scale(1)
 
-.stage2 .container .btn
+.stage0-1 .container .btn
   position: absolute
   top: 69%
   cursor: pointer
@@ -73,7 +76,7 @@ body section
   &:active
     transform: scale(1)
 
-.stage3 .container .cards
+.stage1-1 .container .cards
   display: flex
   justify-content: center
   align-items: center
@@ -103,7 +106,7 @@ body section
     &.flip
       transform: rotateY(180deg)
 
-.stage4 .container .cards
+.stage1-3 .container .cards
   justify-content: center
   align-items: center
   width: 100%
@@ -119,7 +122,7 @@ body section
     margin-top: 7%
     opacity: 0
 
-.stage5 .container .btn
+.stage3-1 .container .btn
   position: absolute
   top: 56%
   cursor: pointer
@@ -136,7 +139,8 @@ body section
   &:active
     transform: scale(1)
 
-.stage6 .container
+.stage4-4 .container,
+.stage3-2 .container
   flex-wrap: wrap
 
   .boxes
@@ -208,7 +212,7 @@ body section
         width: 100%
         position: relative
           
-.stage7 .container
+.stage3-3 .container
   .cards
     justify-content: center
     align-items: center
@@ -270,8 +274,9 @@ body section
         width: 100%
         position: relative
 
-.stage9,
-.stage10
+.stage4-2,
+.stage4-2-2,
+.stage5-3
   .container
     .role
       position: absolute
@@ -283,7 +288,16 @@ body section
       position: absolute
       width: 31.38%
       height: 31.25%
-
+      p 
+        position: absolute
+        left: 9%
+        top: 10%
+        width: 84%
+        color: #FF7292
+        line-height: 56px
+        font-weight: 700
+        font-size: 32px
+        
       img
         width: 100%
 
@@ -316,7 +330,7 @@ body section
       top: 8.128%
       right: 3.25%
 
-.stage11 .container .btn
+.stage4-3 .container .btn
   position: absolute
   bottom: 26.7%
   cursor: pointer
@@ -333,3 +347,107 @@ body section
   &:active
     transform: scale(1)
 
+.stage6-2
+  .container
+    .role
+      position: absolute
+
+      img
+        width: 100%
+
+    .dialogues
+      position: absolute
+      width: 31.38%
+      height: 31.25%
+
+      img
+        width: 100%
+
+    .role1
+      width: 39.93%
+      height: 62.5%
+      left: 0.8%
+      bottom: 0
+
+    .role2
+      width: 44.44%
+      height: 57.32%
+      right: 5%
+      top: 37%
+      z-index: 3
+
+    .dialogues1
+      left: 14.43%
+      top: 11.15%
+
+    .dialogues2
+      right: 14.43%
+      top: 14.3%
+      
+.stage7-2 .container .btn
+  position: absolute
+  top: 69%
+  cursor: pointer
+  width: 20%
+
+  img
+    width: 100%
+    left: 0
+    top: 0
+
+  &:hover
+    transform: scale(1.02)
+
+  &:active
+    transform: scale(1)
+
+
+.stage7-3
+  .container
+    .role
+      position: absolute
+
+      img
+        width: 100%
+
+    .dialogues
+      position: absolute
+      width: 31.38%
+      height: 31.25%
+
+      img
+        width: 100%
+    .cloud
+      position: absolute
+      width: 15%
+
+      img
+        width: 100%
+
+    .role1
+      width: 39.93%
+      height: 62.5%
+      left: 30%
+      bottom: -10%
+
+    .dialogues1
+      left: 14.43%
+      top: 35.15%
+
+    .dialogues2
+      right: 14.43%
+      top: 35.3%
+
+    .cloud1
+      left: 20%
+      top: 11.15%
+
+    .cloud2
+      left: 42%
+      top: 11.15%
+
+    .cloud3
+      right: 21%
+      top: 11.15%
+
+    

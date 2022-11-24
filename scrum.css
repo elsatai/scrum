@@ -1,3 +1,9 @@
+@charset "UTF-8";
+body {
+  overflow: hidden;
+  font-family: "Noto Sans TC", "微軟正黑體", "sans-serif";
+}
+
 body section {
   display: none;
 }
@@ -43,50 +49,50 @@ body section .container .bg-img {
   height: auto;
 }
 
-.stage1 .container .btn {
+.stage0 .container .btn {
   position: absolute;
   top: 36.5%;
   cursor: pointer;
   width: 13%;
 }
-.stage1 .container .btn img {
+.stage0 .container .btn img {
   width: 100%;
   left: 0;
   top: 0;
 }
-.stage1 .container .btn:hover {
+.stage0 .container .btn:hover {
   transform: scale(1.02);
 }
-.stage1 .container .btn:active {
+.stage0 .container .btn:active {
   transform: scale(1);
 }
 
-.stage2 .container .btn {
+.stage0-1 .container .btn {
   position: absolute;
   top: 69%;
   cursor: pointer;
   width: 20%;
 }
-.stage2 .container .btn img {
+.stage0-1 .container .btn img {
   width: 100%;
   left: 0;
   top: 0;
 }
-.stage2 .container .btn:hover {
+.stage0-1 .container .btn:hover {
   transform: scale(1.02);
 }
-.stage2 .container .btn:active {
+.stage0-1 .container .btn:active {
   transform: scale(1);
 }
 
-.stage3 .container .cards {
+.stage1-1 .container .cards {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.stage3 .container .cards .card-box {
+.stage1-1 .container .cards .card-box {
   margin: auto 2%;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -94,7 +100,7 @@ body section .container .bg-img {
   width: 25%;
   height: 54%;
 }
-.stage3 .container .cards .card-box .card {
+.stage1-1 .container .cards .card-box .card {
   display: block;
   position: absolute;
   width: 100%;
@@ -104,21 +110,21 @@ body section .container .bg-img {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.stage3 .container .cards .card-box .card.back {
+.stage1-1 .container .cards .card-box .card.back {
   transform: rotateY(180deg);
 }
-.stage3 .container .cards .card-box.flip {
+.stage1-1 .container .cards .card-box.flip {
   transform: rotateY(180deg);
 }
 
-.stage4 .container .cards {
+.stage1-3 .container .cards {
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   display: flex;
 }
-.stage4 .container .cards .card {
+.stage1-3 .container .cards .card {
   width: 24%;
   height: 53.7%;
   background-repeat: no-repeat;
@@ -128,35 +134,38 @@ body section .container .bg-img {
   opacity: 0;
 }
 
-.stage5 .container .btn {
+.stage3-1 .container .btn {
   position: absolute;
   top: 56%;
   cursor: pointer;
   width: 22.7%;
 }
-.stage5 .container .btn img {
+.stage3-1 .container .btn img {
   width: 100%;
   left: 0;
   top: 0;
 }
-.stage5 .container .btn:hover {
+.stage3-1 .container .btn:hover {
   transform: scale(1.02);
 }
-.stage5 .container .btn:active {
+.stage3-1 .container .btn:active {
   transform: scale(1);
 }
 
-.stage6 .container {
+.stage4-4 .container,
+.stage3-2 .container {
   flex-wrap: wrap;
 }
-.stage6 .container .boxes {
+.stage4-4 .container .boxes,
+.stage3-2 .container .boxes {
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 50%;
   display: flex;
 }
-.stage6 .container .boxes .inner {
+.stage4-4 .container .boxes .inner,
+.stage3-2 .container .boxes .inner {
   width: 16%;
   height: 62.4%;
   background-repeat: no-repeat;
@@ -164,10 +173,12 @@ body section .container .bg-img {
   background-position: bottom;
   margin: 15% 2% 0 2%;
 }
-.stage6 .container .boxes .inner img {
+.stage4-4 .container .boxes .inner img,
+.stage3-2 .container .boxes .inner img {
   width: 100%;
 }
-.stage6 .container .boxes .mosters {
+.stage4-4 .container .boxes .mosters,
+.stage3-2 .container .boxes .mosters {
   width: 16%;
   height: 58.5%;
   background-repeat: no-repeat;
@@ -175,20 +186,25 @@ body section .container .bg-img {
   background-position: bottom;
   margin: -3% 2% 0 2%;
 }
-.stage6 .container .boxes .mosters .moster {
+.stage4-4 .container .boxes .mosters .moster,
+.stage3-2 .container .boxes .mosters .moster {
   width: 100%;
 }
-.stage6 .container .boxes .mosters .moster-hit {
+.stage4-4 .container .boxes .mosters .moster-hit,
+.stage3-2 .container .boxes .mosters .moster-hit {
   width: 100%;
   display: none;
 }
-.stage6 .container .boxes .mosters.hit .moster {
+.stage4-4 .container .boxes .mosters.hit .moster,
+.stage3-2 .container .boxes .mosters.hit .moster {
   display: none;
 }
-.stage6 .container .boxes .mosters.hit .moster-hit {
+.stage4-4 .container .boxes .mosters.hit .moster-hit,
+.stage3-2 .container .boxes .mosters.hit .moster-hit {
   display: block;
 }
-.stage6 .container .tips {
+.stage4-4 .container .tips,
+.stage3-2 .container .tips {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -197,10 +213,12 @@ body section .container .bg-img {
   position: absolute;
   width: 100%;
 }
-.stage6 .container .tips img {
+.stage4-4 .container .tips img,
+.stage3-2 .container .tips img {
   width: 100%;
 }
-.stage6 .container .tips .tip {
+.stage4-4 .container .tips .tip,
+.stage3-2 .container .tips .tip {
   width: 59.7%;
   height: 70.3%;
   margin: 0 auto;
@@ -209,33 +227,34 @@ body section .container .bg-img {
   right: 0;
   left: 0;
 }
-.stage6 .container .tips .tip img {
+.stage4-4 .container .tips .tip img,
+.stage3-2 .container .tips .tip img {
   width: 100%;
   position: relative;
 }
 
-.stage7 .container .cards {
+.stage3-3 .container .cards {
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   display: flex;
 }
-.stage7 .container .cards .card {
+.stage3-3 .container .cards .card {
   margin-top: 10%;
 }
-.stage7 .container .cards .card img {
+.stage3-3 .container .cards .card img {
   width: 100%;
 }
-.stage7 .container .cards .card.card1 {
+.stage3-3 .container .cards .card.card1 {
   width: 30.5%;
   height: 46.8%;
 }
-.stage7 .container .cards .card.card2 {
+.stage3-3 .container .cards .card.card2 {
   width: 39.2%;
   height: 46.8%;
 }
-.stage7 .container .tips {
+.stage3-3 .container .tips {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -244,10 +263,10 @@ body section .container .bg-img {
   position: absolute;
   width: 100%;
 }
-.stage7 .container .tips img {
+.stage3-3 .container .tips img {
   width: 100%;
 }
-.stage7 .container .tips .jira {
+.stage3-3 .container .tips .jira {
   width: 59.7%;
   height: 70.3%;
   margin: 0 auto;
@@ -256,11 +275,11 @@ body section .container .bg-img {
   right: 0;
   left: 0;
 }
-.stage7 .container .tips .jira img {
+.stage3-3 .container .tips .jira img {
   width: 100%;
   position: relative;
 }
-.stage7 .container .tips .jira-text {
+.stage3-3 .container .tips .jira-text {
   width: 47%;
   height: 11.9%;
   margin: 0 auto;
@@ -269,79 +288,203 @@ body section .container .bg-img {
   right: 0;
   left: 0;
 }
-.stage7 .container .tips .jira-text img {
+.stage3-3 .container .tips .jira-text img {
   width: 100%;
   position: relative;
 }
 
-.stage9 .container .role,
-.stage10 .container .role {
+.stage4-2 .container .role,
+.stage4-2-2 .container .role,
+.stage5-3 .container .role {
   position: absolute;
 }
-.stage9 .container .role img,
-.stage10 .container .role img {
+.stage4-2 .container .role img,
+.stage4-2-2 .container .role img,
+.stage5-3 .container .role img {
   width: 100%;
 }
-.stage9 .container .dialogues,
-.stage10 .container .dialogues {
+.stage4-2 .container .dialogues,
+.stage4-2-2 .container .dialogues,
+.stage5-3 .container .dialogues {
   position: absolute;
   width: 31.38%;
   height: 31.25%;
 }
-.stage9 .container .dialogues img,
-.stage10 .container .dialogues img {
+.stage4-2 .container .dialogues p,
+.stage4-2-2 .container .dialogues p,
+.stage5-3 .container .dialogues p {
+  position: absolute;
+  left: 9%;
+  top: 10%;
+  width: 84%;
+  color: #FF7292;
+  line-height: 56px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.stage4-2 .container .dialogues img,
+.stage4-2-2 .container .dialogues img,
+.stage5-3 .container .dialogues img {
   width: 100%;
 }
-.stage9 .container .role1,
-.stage10 .container .role1 {
+.stage4-2 .container .role1,
+.stage4-2-2 .container .role1,
+.stage5-3 .container .role1 {
   width: 39.93%;
   height: 62.5%;
   left: 0.8%;
   bottom: 0;
 }
-.stage9 .container .role2,
-.stage10 .container .role2 {
+.stage4-2 .container .role2,
+.stage4-2-2 .container .role2,
+.stage5-3 .container .role2 {
   width: 44.44%;
   height: 57.32%;
   bottom: 0;
   z-index: 3;
 }
-.stage9 .container .role3,
-.stage10 .container .role3 {
+.stage4-2 .container .role3,
+.stage4-2-2 .container .role3,
+.stage5-3 .container .role3 {
   width: 41.94%;
   height: 62.5%;
   right: 0.8%;
   bottom: 7.8125%;
 }
-.stage9 .container .dialogues1,
-.stage10 .container .dialogues1 {
+.stage4-2 .container .dialogues1,
+.stage4-2-2 .container .dialogues1,
+.stage5-3 .container .dialogues1 {
   left: 2.43%;
   top: 11.15%;
 }
-.stage9 .container .dialogues2,
-.stage10 .container .dialogues2 {
+.stage4-2 .container .dialogues2,
+.stage4-2-2 .container .dialogues2,
+.stage5-3 .container .dialogues2 {
   top: 21.3%;
 }
-.stage9 .container .dialogues3,
-.stage10 .container .dialogues3 {
+.stage4-2 .container .dialogues3,
+.stage4-2-2 .container .dialogues3,
+.stage5-3 .container .dialogues3 {
   top: 8.128%;
   right: 3.25%;
 }
 
-.stage11 .container .btn {
+.stage4-3 .container .btn {
   position: absolute;
   bottom: 26.7%;
   cursor: pointer;
   width: 24%;
 }
-.stage11 .container .btn img {
+.stage4-3 .container .btn img {
   width: 100%;
   left: 0;
   top: 0;
 }
-.stage11 .container .btn:hover {
+.stage4-3 .container .btn:hover {
   transform: scale(1.02);
 }
-.stage11 .container .btn:active {
+.stage4-3 .container .btn:active {
   transform: scale(1);
+}
+
+.stage6-2 .container .role {
+  position: absolute;
+}
+.stage6-2 .container .role img {
+  width: 100%;
+}
+.stage6-2 .container .dialogues {
+  position: absolute;
+  width: 31.38%;
+  height: 31.25%;
+}
+.stage6-2 .container .dialogues img {
+  width: 100%;
+}
+.stage6-2 .container .role1 {
+  width: 39.93%;
+  height: 62.5%;
+  left: 0.8%;
+  bottom: 0;
+}
+.stage6-2 .container .role2 {
+  width: 44.44%;
+  height: 57.32%;
+  right: 5%;
+  top: 37%;
+  z-index: 3;
+}
+.stage6-2 .container .dialogues1 {
+  left: 14.43%;
+  top: 11.15%;
+}
+.stage6-2 .container .dialogues2 {
+  right: 14.43%;
+  top: 14.3%;
+}
+
+.stage7-2 .container .btn {
+  position: absolute;
+  top: 69%;
+  cursor: pointer;
+  width: 20%;
+}
+.stage7-2 .container .btn img {
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.stage7-2 .container .btn:hover {
+  transform: scale(1.02);
+}
+.stage7-2 .container .btn:active {
+  transform: scale(1);
+}
+
+.stage7-3 .container .role {
+  position: absolute;
+}
+.stage7-3 .container .role img {
+  width: 100%;
+}
+.stage7-3 .container .dialogues {
+  position: absolute;
+  width: 31.38%;
+  height: 31.25%;
+}
+.stage7-3 .container .dialogues img {
+  width: 100%;
+}
+.stage7-3 .container .cloud {
+  position: absolute;
+  width: 15%;
+}
+.stage7-3 .container .cloud img {
+  width: 100%;
+}
+.stage7-3 .container .role1 {
+  width: 39.93%;
+  height: 62.5%;
+  left: 30%;
+  bottom: -10%;
+}
+.stage7-3 .container .dialogues1 {
+  left: 14.43%;
+  top: 35.15%;
+}
+.stage7-3 .container .dialogues2 {
+  right: 14.43%;
+  top: 35.3%;
+}
+.stage7-3 .container .cloud1 {
+  left: 20%;
+  top: 11.15%;
+}
+.stage7-3 .container .cloud2 {
+  left: 42%;
+  top: 11.15%;
+}
+.stage7-3 .container .cloud3 {
+  right: 21%;
+  top: 11.15%;
 }/*# sourceMappingURL=scrum.css.map */
