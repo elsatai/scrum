@@ -272,4 +272,76 @@ body section .container .bg-img {
 .stage7 .container .tips .jira-text img {
   width: 100%;
   position: relative;
+}
+
+.stage9 .container .role,
+.stage10 .container .role {
+  position: absolute;
+}
+.stage9 .container .role img,
+.stage10 .container .role img {
+  width: 100%;
+}
+.stage9 .container .dialogues,
+.stage10 .container .dialogues {
+  position: absolute;
+  width: 31.38%;
+  height: 31.25%;
+}
+.stage9 .container .dialogues img,
+.stage10 .container .dialogues img {
+  width: 100%;
+}
+.stage9 .container .role1,
+.stage10 .container .role1 {
+  width: 39.93%;
+  height: 62.5%;
+  left: 0.8%;
+  bottom: 0;
+}
+.stage9 .container .role2,
+.stage10 .container .role2 {
+  width: 44.44%;
+  height: 57.32%;
+  bottom: 0;
+  z-index: 3;
+}
+.stage9 .container .role3,
+.stage10 .container .role3 {
+  width: 41.94%;
+  height: 62.5%;
+  right: 0.8%;
+  bottom: 7.8125%;
+}
+.stage9 .container .dialogues1,
+.stage10 .container .dialogues1 {
+  left: 2.43%;
+  top: 11.15%;
+}
+.stage9 .container .dialogues2,
+.stage10 .container .dialogues2 {
+  top: 21.3%;
+}
+.stage9 .container .dialogues3,
+.stage10 .container .dialogues3 {
+  top: 8.128%;
+  right: 3.25%;
+}
+
+.stage11 .container .btn {
+  position: absolute;
+  bottom: 26.7%;
+  cursor: pointer;
+  width: 24%;
+}
+.stage11 .container .btn img {
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.stage11 .container .btn:hover {
+  transform: scale(1.02);
+}
+.stage11 .container .btn:active {
+  transform: scale(1);
 }/*# sourceMappingURL=scrum.css.map */
