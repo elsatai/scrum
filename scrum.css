@@ -273,6 +273,16 @@ body section .container .bg-img {
   width: 100%;
 }
 .stage3-3 .container .tips img {
+  width: 0;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition-duration: 1s;
+}
+.stage3-3 .container .tips img.bigger {
   width: 100%;
 }
 .stage3-3 .container .tips .jira {
@@ -280,9 +290,13 @@ body section .container .bg-img {
   height: 70.3%;
   margin: 0 auto;
   position: absolute;
-  bottom: 0;
+  bottom: -100%;
   right: 0;
   left: 0;
+  transition-duration: 1s;
+}
+.stage3-3 .container .tips .jira.bigger {
+  bottom: 0%;
 }
 .stage3-3 .container .tips .jira img {
   width: 100%;

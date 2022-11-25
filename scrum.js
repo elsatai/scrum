@@ -2,8 +2,13 @@ const changeStep = (step) => {
     $('section').removeClass('active');
     $(`section.stage${step}`).addClass('active');
 
-    if (step == '1-3') {
-        step4fadeIn();
+    switch (step) {
+        case '1-3':
+            step13fadeIn();
+            break;
+        case '3-3':
+            step33()
+            break;
     }
 }
 
@@ -18,7 +23,7 @@ const filpCard = () => {
     });
 }
 
-const step4fadeIn = async () => {
+const step13fadeIn = async () => {
     await $('.stage1-3 .card').eq(0).animate({
         "opacity": "1"
     }, 600).promise();
@@ -102,6 +107,21 @@ const _stage32 = {
         $('.stage3-2 .container .boxes .mosters').attr('style', 'position: relative;');
     }
 };
+
+const step33 = async () => {
+    setTimeout(() => {
+        $('.stage3-3 .mask img').addClass('bigger')
+    }, 200);
+    setTimeout(() => {
+        $('.stage3-3 .jira').addClass('bigger');
+    }, 500);
+    setTimeout(() => {
+        $('.stage3-3 .jira-text').fadeIn();
+    }, 1000);
+    setTimeout(() => {
+        $('.stage3-3 .next-btn').fadeIn();
+    }, 1500);
+}
 
 $(() => {
     filpCard();
