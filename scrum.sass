@@ -1,6 +1,7 @@
 body
   overflow: hidden
   font-family: 'Noto Sans TC', '微軟正黑體', 'sans-serif'
+
 body section
   display: none
 
@@ -26,6 +27,12 @@ body section
       background-size: contain
       z-index: -1
 
+[draggable="true"]
+  user-select: none
+  -moz-user-select: none
+  -webkit-user-select: none
+  -ms-user-select: none
+
 .hidden
   display: none
     
@@ -36,7 +43,7 @@ body section
   height: 9%
   bottom: 3%
   right: 3%
-  z-index: 5
+  z-index: 16
 
   img
     width: 100%
@@ -168,6 +175,7 @@ body section
       background-size: contain
       background-position: bottom
       margin: -3% 2% 0 2%
+      cursor: grab
 
       .moster
         width: 100%
