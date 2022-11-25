@@ -365,6 +365,7 @@ body section .container .bg-img {
   height: 57.32%;
   bottom: 0;
   z-index: 3;
+  right: inherit;
 }
 .stage4-2 .container .role3,
 .stage4-2-2 .container .role3,
@@ -384,6 +385,7 @@ body section .container .bg-img {
 .stage4-2-2 .container .dialogues2,
 .stage5-3 .container .dialogues2 {
   top: 21.3%;
+  right: inherit;
 }
 .stage4-2 .container .dialogues3,
 .stage4-2-2 .container .dialogues3,
@@ -410,40 +412,86 @@ body section .container .bg-img {
   transform: scale(1);
 }
 
-.stage6-2 .container .role {
+.stage6-2-1 .role,
+.stage6-2-2 .role,
+.stage6-2-3 .role,
+.container .role {
   position: absolute;
 }
-.stage6-2 .container .role img {
+.stage6-2-1 .role img,
+.stage6-2-2 .role img,
+.stage6-2-3 .role img,
+.container .role img {
   width: 100%;
 }
-.stage6-2 .container .dialogues {
+.stage6-2-1 .dialogues,
+.stage6-2-2 .dialogues,
+.stage6-2-3 .dialogues,
+.container .dialogues {
   position: absolute;
   width: 31.38%;
   height: 31.25%;
 }
-.stage6-2 .container .dialogues img {
+.stage6-2-1 .dialogues p,
+.stage6-2-2 .dialogues p,
+.stage6-2-3 .dialogues p,
+.container .dialogues p {
+  position: absolute;
+  left: 9%;
+  top: 10%;
+  width: 84%;
+  color: #FF7292;
+  line-height: 56px;
+  font-weight: 700;
+  font-size: 32px;
+}
+.stage6-2-1 .dialogues img,
+.stage6-2-2 .dialogues img,
+.stage6-2-3 .dialogues img,
+.container .dialogues img {
   width: 100%;
 }
-.stage6-2 .container .role1 {
-  width: 39.93%;
-  height: 62.5%;
-  left: 0.8%;
-  bottom: 0;
+.stage6-2-1 .role1,
+.stage6-2-2 .role1,
+.stage6-2-3 .role1,
+.container .role1 {
+  width: 36.8%;
+  height: 51.75%;
+  left: 6.94%;
+  bottom: 1.953%;
 }
-.stage6-2 .container .role2 {
-  width: 44.44%;
-  height: 57.32%;
-  right: 5%;
-  top: 37%;
+.stage6-2-1 .role2,
+.stage6-2-2 .role2,
+.stage6-2-3 .role2,
+.container .role2 {
+  width: 40.97%;
+  height: 57.61%;
+  right: 10.41%;
+  bottom: 9.96%;
   z-index: 3;
 }
-.stage6-2 .container .dialogues1 {
-  left: 14.43%;
-  top: 11.15%;
+.stage6-2-1 .role3,
+.stage6-2-2 .role3,
+.stage6-2-3 .role3,
+.container .role3 {
+  width: 36.8%;
+  height: 51.75%;
+  right: 10.41%;
+  bottom: 9.96%;
 }
-.stage6-2 .container .dialogues2 {
-  right: 14.43%;
-  top: 14.3%;
+.stage6-2-1 .dialogues1,
+.stage6-2-2 .dialogues1,
+.stage6-2-3 .dialogues1,
+.container .dialogues1 {
+  left: 12.5%;
+  top: 10.15%;
+}
+.stage6-2-1 .dialogues2,
+.stage6-2-2 .dialogues2,
+.stage6-2-3 .dialogues2,
+.container .dialogues2 {
+  right: 10.34%;
+  top: 7.12%;
 }
 
 .stage7-2 .container .btn {

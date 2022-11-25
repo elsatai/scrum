@@ -15,6 +15,18 @@ const changeStep = (step) => {
         case '4-2-2':
             step422()
             break;
+        case '5-3':
+            step53()
+            break;
+        case '6-2-1':
+            step621()
+            break;
+        case '6-2-2':
+            step622()
+            break;
+        case '6-2-3':
+            step623()
+            break;
     }
 }
 
@@ -114,6 +126,20 @@ const _stage32 = {
     }
 };
 
+const typeWriter = (el, text) => {
+    return new Promise((resolve, reject) => {
+        const typed = new Typed(el, {
+            strings: [text],
+            typeSpeed: 80,
+            showCursor: false,
+            fadeOut: true,
+            onComplete: function () {
+                resolve();
+            }
+        });
+    });
+}
+
 const step33 = () => {
     setTimeout(() => {
         $('.stage3-3 .mask img').addClass('bigger')
@@ -155,21 +181,126 @@ const step422 = () => {
         })
 }
 
-const typeWriter = (el, text) => {
-    return new Promise((resolve, reject) => {
-        const typed = new Typed(el, {
-            strings: [text],
-            typeSpeed: 80,
-            showCursor: false,
-            fadeOut: true,
-            onComplete: function () {
-                resolve();
+const step53 = () => {
+    typeWriter('#text-5-3-1', '珍奶怪要打八下才行，我昨天打了他兩下，今天應該可以再打到一下！')
+        .then(() => {
+            return typeWriter('#text-5-3-2', '那個要打三下的香蕉怪我打他兩下他就跑了！看來要再多花一些時間找他！');
+        })
+        .then(() => {
+            return typeWriter('#text-5-3-3', '我昨天打到珍奶怪一下，今天會先跟狗狗去找香蕉怪！')
+        })
+        .then(() => {
+            $('.stage5-3 .next-btn').removeClass('hidden');
+        })
+}
+
+const _stage44 = {
+    drop: () => {
+        const $drag = $('.stage4-4 .container .boxes .mosters'),
+            $drop = $('.stage4-4 .container .boxes .inner');
+
+        $drag.draggable({
+            revert: "invalid"
+        });
+        $drop.droppable({
+            drop: function (event, ui) {
+                let this_monsters = ui.draggable;
+                this_monsters.addClass('hit');
+
+                _stage32.checkFirst($(event.target), ui.draggable);
             }
         });
-    });
+    },
+    checkFirst: (inner, moster) => {
+        const innerIndex = $('.stage4-4 .container .boxes .inner').index(inner),
+            mosterIndex = $('.stage4-4 .container .boxes .mosters').index(moster);
+
+        if (innerIndex == 0 && mosterIndex != 3) {
+            _stage32.showTips('false');
+        } else {
+            _stage32.checkAll();
+        }
+    },
+    checkAll: (inner, moster) => {
+        const $mosters = $('.stage4-4 .container .boxes .mosters.hit');
+        if ($mosters.length > 3) {
+            const m1 = $('.stage4-4 .container .boxes .mosters.hit').eq(0).position().left,
+                m2 = $('.stage4-4 .container .boxes .mosters.hit').eq(1).position().left,
+                m3 = $('.stage4-4 .container .boxes .mosters.hit').eq(2).position().left,
+                m4 = $('.stage4-4 .container .boxes .mosters.hit').eq(3).position().left;
+
+            if (m4 < m2 && m2 < m3 && m3 < m1) {
+                _stage32.showTips('correct');
+            } else if (m4 < m3 && m3 < m2 && m2 < m1) {
+                _stage32.showTips('correct');
+            } else {
+                _stage32.showTips('goback');
+            }
+        }
+    },
+    showTips: (type) => {
+        $('.stage4-4 .container .tips').fadeIn();
+
+        switch (type) {
+            case 'false1':
+                $('.stage4-4 .container .tips .tip.false1').fadeIn();
+                break;
+            case 'false2':
+                $('.stage4-4 .container .tips .tip.false2').fadeIn();
+                break;
+            case 'goback':
+                $('.stage4-4 .container .tips .tip.goback').fadeIn();
+                break;
+            case 'correct':
+                $('.stage4-4 .container .tips .tip.correct').fadeIn();
+                $('.stage4-4 .container .tips .mask').removeAttr('onclick');
+                $('.stage4-4 .container .next-btn').removeClass('hidden');
+                break;
+        }
+    },
+    hideTips: () => {
+        _stage32.resetLocation();
+        $('.stage4-4 .container .tips').fadeOut();
+        $('.stage4-4 .container .tips .tip').fadeOut();
+    },
+    resetLocation: () => {
+        $('.stage4-4 .container .boxes .mosters').removeClass('hit');
+        $('.stage4-4 .container .boxes .mosters').attr('style', 'position: relative;');
+    }
+};
+
+const step621 = () => {
+    typeWriter('#text-6-2-1-1', '我們打敗珍奶怪後，你們的小孩體重狀況怎麼樣呢？')
+        .then(() => {
+            return typeWriter('#text-6-2-1-2', '熱量攝取正常很多，但好像還是很愛吃雞排耶！真傷腦筋！');
+        })
+        .then(() => {
+            $('.stage6-2-1 .next-btn').removeClass('hidden');
+        })
+}
+
+const step622 = () => {
+    typeWriter('#text-6-2-2-1', '這樣啊！那我們可能也要打敗雞排怪才行～')
+        .then(() => {
+            return typeWriter('#text-6-2-2-2', '熱量攝取正常很多，但好像還是很愛吃雞排耶！真傷腦筋！');
+        })
+        .then(() => {
+            $('.stage6-2-2 .next-btn').removeClass('hidden');
+        })
+}
+
+const step623 = () => {
+    typeWriter('#text-6-2-3-2', '貓怪變少後，我兒子終於願意工作不會在家狂吸貓了呢！')
+        .then(() => {
+            return typeWriter('#text-6-2-3-1', '那真是太好了！除了貓怪以外，也吸不帶珍奶怪了喔！');
+        })
+        .then(() => {
+            $('.stage6-2-3 .next-btn').removeClass('hidden');
+        })
 }
 
 $(() => {
     filpCard();
     _stage32.drop();
+    _stage44.drop();
 });
