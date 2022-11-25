@@ -9,6 +9,12 @@ const changeStep = (step) => {
         case '3-3':
             step33()
             break;
+        case '4-2':
+            step42()
+            break;
+        case '4-2-2':
+            step422()
+            break;
     }
 }
 
@@ -108,7 +114,7 @@ const _stage32 = {
     }
 };
 
-const step33 = async () => {
+const step33 = () => {
     setTimeout(() => {
         $('.stage3-3 .mask img').addClass('bigger')
     }, 200);
@@ -121,6 +127,46 @@ const step33 = async () => {
     setTimeout(() => {
         $('.stage3-3 .next-btn').fadeIn();
     }, 1500);
+}
+
+const step42 = () => {
+    typeWriter('#text-4-2-1', '我很會吃香蕉！根據我的經驗，香蕉怪應該打個兩下就掛了！')
+        .then(() => {
+            return typeWriter('#text-4-2-2', '香蕉怪看起來很強耶！我覺得應該要打個五下！');
+        })
+        .then(() => {
+            return typeWriter('#text-4-2-3', '沒錯！皮蠻厚的，可能要個五六下才能打敗他！')
+        })
+        .then(() => {
+            $('.stage4-2 .next-btn').removeClass('hidden');
+        })
+}
+
+const step422 = () => {
+    typeWriter('#text-4-2-2-1', '我也有打過幾次貓怪，我覺得還好耶！應該可以打三下就掛！')
+        .then(() => {
+            return typeWriter('#text-4-2-2-2', '我有攻擊貓怪的經驗，貓怪超難纏的，我看也要打他個四下！');
+        })
+        .then(() => {
+            return typeWriter('#text-4-2-2-3', '我可以引開貓怪的注意，我想應該不難打敗他！')
+        })
+        .then(() => {
+            $('.stage4-2-2 .next-btn').removeClass('hidden');
+        })
+}
+
+const typeWriter = (el, text) => {
+    return new Promise((resolve, reject) => {
+        const typed = new Typed(el, {
+            strings: [text],
+            typeSpeed: 80,
+            showCursor: false,
+            fadeOut: true,
+            onComplete: function () {
+                resolve();
+            }
+        });
+    });
 }
 
 $(() => {
